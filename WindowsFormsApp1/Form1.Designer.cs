@@ -59,7 +59,7 @@ namespace WindowsFormsApp1
             // 
             // btnHello
             // 
-            this.btnHello.Location = new System.Drawing.Point(353, 228);
+            this.btnHello.Location = new System.Drawing.Point(353, 231);
             this.btnHello.Name = "btnHello";
             this.btnHello.Size = new System.Drawing.Size(140, 23);
             this.btnHello.TabIndex = 2;
