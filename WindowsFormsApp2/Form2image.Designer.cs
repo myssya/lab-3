@@ -79,6 +79,7 @@ namespace WindowsFormsApp2
             this.textBox1.Size = new System.Drawing.Size(156, 20);
             this.textBox1.TabIndex = 4;
             this.textBox1.Text = "Имя файла";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form2image
             // 

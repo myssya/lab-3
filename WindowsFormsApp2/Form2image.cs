@@ -63,5 +63,10 @@ namespace WindowsFormsApp2
         {
             get { return _canceled; }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
