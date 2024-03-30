@@ -20,6 +20,7 @@ namespace WindowsFormsApp2
                 for (int x0 = x - Size; x0 < x + Size; ++x0)
                 {
                     image.SetPixel(x0, y0, BrushColor);
+
                 }
             }
         }

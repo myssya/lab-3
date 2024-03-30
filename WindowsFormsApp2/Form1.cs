@@ -15,9 +15,11 @@ namespace WindowsFormsApp2
         int _x;
         int _y;
         bool _mouseClicked = false;
+
+
         Color SelectedColor
         {
-            get { return Color.Red; }
+            get { return colorDialog1.Color; }
         }
         int SelectedSize
         {
@@ -27,7 +29,7 @@ namespace WindowsFormsApp2
         public Form1()
         {
             InitializeComponent();
-            CreateBlank(pictureBox1.Width, pictureBox1.Height);
+            CreateBlank(2000, 1000);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -97,6 +99,30 @@ namespace WindowsFormsApp2
             {
                 _selectedBrush.Draw(pictureBox1.Image as Bitmap, _x, _y);
                 pictureBox1.Refresh();
+            }
+        }
+
+        private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateBlank(1000, 1000);
+            Form2image form = new Form2image();
+            form.ShowDialog();
+            if (form.Canceled == false )
+            {
+                CreateBlank(form.W, form.H );
+            }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                button5.BackColor = colorDialog1.Color;
             }
         }
     }
