@@ -44,7 +44,7 @@ namespace WindowsFormsApp2
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            _selectedBrush = new snegBrush(SelectedColor, SelectedSize);
         }
         Color DefaultColor
         {
@@ -63,10 +63,10 @@ namespace WindowsFormsApp2
                 for (int j = 0; j < height; j++)
                 {
                     bmp.SetPixel(i, j, DefaultColor);
-                }                                                                                                                                                                    
+                }
             }
             pictureBox1.Image = bmp;
-            if (oldImage !=null)
+            if (oldImage != null)
             {
                 oldImage.Dispose();       //освобождаем ресурсы , занятые старой картинкой
             }
@@ -107,9 +107,9 @@ namespace WindowsFormsApp2
             CreateBlank(1000, 1000);
             Form2image form = new Form2image();
             form.ShowDialog();
-            if (form.Canceled == false )
+            if (form.Canceled == false)
             {
-                CreateBlank(form.W, form.H );
+                CreateBlank(form.W, form.H);
             }
         }
 
@@ -125,7 +125,20 @@ namespace WindowsFormsApp2
                 button5.BackColor = colorDialog1.Color;
             }
         }
-    }
 
-    
+        private void button3_Click(object sender, EventArgs e)
+        {
+            _selectedBrush = new CircleBrush(SelectedColor, SelectedSize);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            _selectedBrush = new krugBrush(SelectedColor, SelectedSize);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            _selectedBrush = new BalonBrush(SelectedColor, SelectedSize);
+        }
+    }
 }
