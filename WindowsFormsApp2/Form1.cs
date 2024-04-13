@@ -44,7 +44,7 @@ namespace WindowsFormsApp2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            _selectedBrush = new snegBrush(SelectedColor, SelectedSize);
+            _selectedBrush = new snegBrush(SelectedColor, SelectedSize, pictureBox1);
         }
         Color DefaultColor
         {
