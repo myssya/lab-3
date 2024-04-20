@@ -19,9 +19,24 @@ namespace WindowsFormsApp2
 
         public override void Draw(Bitmap image, int x, int y)
         {
-            //for 
-            //int i = - Size; i <= Size i++;
-            
+            int size = Size;
+
+            for (int y0 = y - Size; y0 < y + Size; ++y0)
+            {
+                image.SetPixel(x, y0, BrushColor);
+            }
+
+            for (int x0 = x - Size; x0 < x + Size; ++x0)
+            {
+                image.SetPixel(x0, y, BrushColor);
+            }
+            for (int i = 1; i <= Size; i++)
+            {
+                image.SetPixel(x - i, y - i, BrushColor);
+                image.SetPixel(x + i, y - i, BrushColor);
+                image.SetPixel(x - i, y + i, BrushColor);
+                image.SetPixel(x + i, y + i, BrushColor);
+            }
         }
  
     }

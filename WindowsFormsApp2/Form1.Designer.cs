@@ -29,7 +29,6 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.jhjkhjToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,6 +40,7 @@ namespace WindowsFormsApp2
             this.toolsPanel = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,7 +49,6 @@ namespace WindowsFormsApp2
             this.drawPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.button6 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.toolsPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -135,8 +134,8 @@ namespace WindowsFormsApp2
             // 
             // button5
             // 
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(3, 174);
+            this.button5.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button5.Location = new System.Drawing.Point(13, 174);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(45, 34);
             this.button5.TabIndex = 1;
@@ -159,6 +158,16 @@ namespace WindowsFormsApp2
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Выбор кисти";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(13, 128);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 2;
+            this.button6.Text = "балончик";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button4
             // 
@@ -207,18 +216,20 @@ namespace WindowsFormsApp2
             // 
             // trackBar1
             // 
+            this.trackBar1.AllowDrop = true;
             this.trackBar1.AutoSize = false;
             this.trackBar1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.trackBar1.Dock = System.Windows.Forms.DockStyle.Top;
             this.trackBar1.LargeChange = 1;
             this.trackBar1.Location = new System.Drawing.Point(3, 16);
+            this.trackBar1.Maximum = 20;
             this.trackBar1.Minimum = 5;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(213, 27);
             this.trackBar1.TabIndex = 0;
             this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar1.Value = 5;
-            this.trackBar1.Scroll += new System.EventHandler(this.button1_Click);
+            this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
             // 
             // drawPanel
             // 
@@ -242,16 +253,6 @@ namespace WindowsFormsApp2
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox1_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(13, 128);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "балончик";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 

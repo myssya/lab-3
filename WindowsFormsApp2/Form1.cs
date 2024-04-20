@@ -120,10 +120,6 @@ namespace WindowsFormsApp2
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
-            {
-                button5.BackColor = colorDialog1.Color;
-            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -139,6 +135,18 @@ namespace WindowsFormsApp2
         private void button6_Click(object sender, EventArgs e)
         {
             _selectedBrush = new BalonBrush(SelectedColor, SelectedSize);
+        }
+
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            if (_selectedBrush != null)
+            {
+                _selectedBrush.Size = trackBar1.Value;
+            }
+            else
+            {
+
+            }
         }
     }
 }
